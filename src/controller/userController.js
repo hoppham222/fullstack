@@ -9,7 +9,7 @@ let handLogin = async (req, res) => {
             message:'not undifile'
         })
     }
-    let userData = await userService.handleUserLogin(email.password);
+    let userData = await userService.handleUserLogin(email,password);
 
     return res.status(200).json({
         errCode: userData.errCode,

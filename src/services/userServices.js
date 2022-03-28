@@ -42,8 +42,8 @@ let handleUserLogin = (email, password) => {
 let checkUserEmail = (email) => {
     return new Promise(async (resolve,reject) => {
       try {
-          let user = await db.user.findOne({
-              where:{email: userEmail}
+          let user = await db.User.findOne({
+              where:{email: email}
           })
 
           if (user) {
